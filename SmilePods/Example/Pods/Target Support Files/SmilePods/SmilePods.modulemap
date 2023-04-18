@@ -1,0 +1,6 @@
+framework module SmilePods {
+  umbrella header "SmilePods-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - SmilePods (0.1.0)
+
+DEPENDENCIES:
+  - SmilePods (from `../`)
+
+EXTERNAL SOURCES:
+  SmilePods:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SmilePods: 26d8ffcef81e372902fbd26f9b091dbb332f3a36
+
+PODFILE CHECKSUM: b37506d937d8fc250e823b1966e4947d23c12753
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'SmilePods_Example' do
+  pod 'SmilePods', :path => '../'
+
+  target 'SmilePods_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

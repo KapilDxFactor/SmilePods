@@ -1,0 +1,6 @@
+framework module Pods_SmilePods_Example {
+  umbrella header "Pods-SmilePods_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
