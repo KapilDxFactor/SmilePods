@@ -12,8 +12,8 @@
 		3B29670C9185EF44889847AB86AE9B4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		482EB719F47A97570521364C8180284E /* Pods-SmilePods_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DD7E41B75DAC61A7B51D6C8562EF72 /* Pods-SmilePods_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CA8CC884CE29836B325B4F526A14DFF /* Pods-SmilePods_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA294A46EB51300C9A02E2C7D51E9571 /* Pods-SmilePods_Example-dummy.m */; };
+		52D7BDDC29EEE20E00751B90 /* OSLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D7BDDB29EEE20E00751B90 /* OSLogger.swift */; };
 		62F769FCB78855F63EE2E4DDA2BD5E0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		748FEBDDB571EB50368312F8B8FE5AF4 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0990FA4D9BB089CA4D4BE3FF4E2B138 /* ReplaceMe.swift */; };
 		BE010870820F42226E261AD1FF0DE785 /* Pods-SmilePods_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7854EEA5E5A6EC6E3E109D30686DB5DC /* Pods-SmilePods_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E838CDBFDFD25C2EE69DBA1D118CF208 /* SmilePods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB15B654CA16692FE0EF9DB5EE5FBBF3 /* SmilePods-dummy.m */; };
 		EC3DA948E32C3890998817C6F0348ABE /* Pods-SmilePods_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A88C385FC2DB81AE755AE2ADF96C6736 /* Pods-SmilePods_Tests-dummy.m */; };
@@ -39,11 +39,12 @@
 /* Begin PBXFileReference section */
 		1FEAF134A185738B7D36C52489F3E78C /* SmilePods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmilePods.release.xcconfig; sourceTree = "<group>"; };
 		3337A1CA7EBE1DB052824253C42D2606 /* SmilePods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmilePods.modulemap; sourceTree = "<group>"; };
-		398653073DB63D16ABDBEDB0A628AC46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		398653073DB63D16ABDBEDB0A628AC46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3E7214984425F30CF6D52E58BF4E7109 /* Pods-SmilePods_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmilePods_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3F81F4DE1DF8D8A10463A91EC8DE35AF /* Pods-SmilePods_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmilePods_Example-frameworks.sh"; sourceTree = "<group>"; };
 		52C6B8CF17D86FBE25FEFD7069F865F7 /* Pods-SmilePods_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmilePods_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		60F1A706223D354727600017E2D57517 /* SmilePods.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmilePods.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		52D7BDDB29EEE20E00751B90 /* OSLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogger.swift; sourceTree = "<group>"; };
+		60F1A706223D354727600017E2D57517 /* SmilePods.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SmilePods.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6DC60F4F44A8D98B4C52F4537C87BBBA /* SmilePods */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmilePods; path = SmilePods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6F9F02428EFAF3D6555E59AC964E45 /* Pods-SmilePods_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmilePods_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -53,10 +54,9 @@
 		9188FBF420C249E613C7949DDB27290E /* Pods-SmilePods_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmilePods_Tests-Info.plist"; sourceTree = "<group>"; };
 		925EAC2669765B7A8F1F82A20F9182C4 /* Pods-SmilePods_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmilePods_Tests"; path = Pods_SmilePods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		955075E85CC963D4F30081B6FA6308F6 /* Pods-SmilePods_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmilePods_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EB04EAE8D4D4C237DFE388594B3242D /* Pods-SmilePods_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmilePods_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A0990FA4D9BB089CA4D4BE3FF4E2B138 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SmilePods/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		A858139803BE218F088171CE1248A71B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A858139803BE218F088171CE1248A71B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A88C385FC2DB81AE755AE2ADF96C6736 /* Pods-SmilePods_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmilePods_Tests-dummy.m"; sourceTree = "<group>"; };
 		BFBE75C7A7EC475563BBFFB1D351994A /* Pods-SmilePods_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmilePods_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C59853B6A9460893F662613564AAB178 /* Pods-SmilePods_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmilePods_Example.modulemap"; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		DD669B5A5DEE3B3E409DD51B1CA2AE80 /* Pods-SmilePods_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmilePods_Example-Info.plist"; sourceTree = "<group>"; };
 		DFDAB0BD382C852CD44E5772F8C77780 /* Pods-SmilePods_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmilePods_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DFE1E5E4443DF5AE6D3B6D1294F5741F /* SmilePods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmilePods-umbrella.h"; sourceTree = "<group>"; };
-		E6CB85C05DF71167DCCFB8FF98798A20 /* Pods-SmilePods_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SmilePods_Example"; path = Pods_SmilePods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6CB85C05DF71167DCCFB8FF98798A20 /* Pods_SmilePods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmilePods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4AFC5C235D1FC837BAA2B9C3BE4D9A /* Pods-SmilePods_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmilePods_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EEA96676DC62FF0F3BB72DBCCE3A99A7 /* Pods-SmilePods_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmilePods_Tests.modulemap"; sourceTree = "<group>"; };
 		FB15B654CA16692FE0EF9DB5EE5FBBF3 /* SmilePods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmilePods-dummy.m"; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		286840FA8F83A60452496D4E35138D99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E6CB85C05DF71167DCCFB8FF98798A20 /* Pods-SmilePods_Example */,
+				E6CB85C05DF71167DCCFB8FF98798A20 /* Pods_SmilePods_Example.framework */,
 				925EAC2669765B7A8F1F82A20F9182C4 /* Pods-SmilePods_Tests */,
 				6DC60F4F44A8D98B4C52F4537C87BBBA /* SmilePods */,
 			);
@@ -215,7 +215,7 @@
 		F8A56C41458342420BFCB6AB5E36B3B0 /* SmilePods */ = {
 			isa = PBXGroup;
 			children = (
-				A0990FA4D9BB089CA4D4BE3FF4E2B138 /* ReplaceMe.swift */,
+				52D7BDDB29EEE20E00751B90 /* OSLogger.swift */,
 				D9574FE1E61CAEC3F3EC3443CB1060EE /* Pod */,
 				E1167A6193649DD0E2D62F48389FE9D3 /* Support Files */,
 			);
@@ -287,7 +287,7 @@
 			);
 			name = "Pods-SmilePods_Example";
 			productName = Pods_SmilePods_Example;
-			productReference = E6CB85C05DF71167DCCFB8FF98798A20 /* Pods-SmilePods_Example */;
+			productReference = E6CB85C05DF71167DCCFB8FF98798A20 /* Pods_SmilePods_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		ECA93F6A1E3CDB9BFA2796E4375937B7 /* Pods-SmilePods_Tests */ = {
@@ -317,6 +317,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CE54B92F9333693775823F7ED38B3FF2 = {
+						LastSwiftMigration = 1420;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -376,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CA8CC884CE29836B325B4F526A14DFF /* Pods-SmilePods_Example-dummy.m in Sources */,
+				52D7BDDC29EEE20E00751B90 /* OSLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				748FEBDDB571EB50368312F8B8FE5AF4 /* ReplaceMe.swift in Sources */,
 				E838CDBFDFD25C2EE69DBA1D118CF208 /* SmilePods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +449,7 @@
 			baseConfigurationReference = 6F6F9F02428EFAF3D6555E59AC964E45 /* Pods-SmilePods_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -455,7 +461,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SmilePods_Example/Pods-SmilePods_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SmilePods_Example/Pods-SmilePods_Example.modulemap";
@@ -466,6 +472,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -543,6 +551,7 @@
 			baseConfigurationReference = ED4AFC5C235D1FC837BAA2B9C3BE4D9A /* Pods-SmilePods_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -554,7 +563,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SmilePods_Example/Pods-SmilePods_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SmilePods_Example/Pods-SmilePods_Example.modulemap";
@@ -565,6 +574,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -627,8 +637,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
